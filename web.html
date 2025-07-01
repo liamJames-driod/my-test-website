@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Cute Page 💕</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+      color: #ff3399;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .heart {
+      color: red;
+      animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    .button {
+      padding: 15px 30px;
+      background: #ff66b2;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #ff3399;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      display: none;
+    }
+    #meter {
+      width: 100%;
+      max-width: 300px;
+      margin: 30px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi Babe 💖</h1>
+  <p>Welcome to our cute little space! You + Me = ❤️ Forever</p>
+
+  <button class="button" onclick="showMessage()">Click for a Surprise 💌</button>
+  <div id="message">You are the peanut butter to my jelly. I love you endlessly! 💕</div>
+
+  <h2>How much do we love each other?</h2>
+  <input type="range" min="0" max="100" value="100" id="meter" oninput="updateMeter(this.value)">
+  <p id="meterValue">Love Level: 100%</p>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+
+    function updateMeter(value) {
+      document.getElementById('meterValue').innerText = 'Love Level: ' + value + '%';
+    }
+  </script>
+</body>
+</html>
+
